@@ -1,0 +1,225 @@
+<html>
+<head>
+  <title>App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General styles */
+    * {
+      box-sizing: border-box;
+    }
+   
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    /* Header styles */
+    #App {
+      height: 40px;
+      width: 100%;
+      background-color: cyan;
+      padding-top: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin:0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+    .dropdown
+    {
+      display:none;
+
+    }
+   
+   
+    .dropdown ul {
+      display:block;
+      background-color: pink;
+      width: 150px;
+      height: 200px;
+      margin-top: 10px;
+      padding: 10px;
+     
+    }
+      .navbar ul li:hover .dropdown
+    {
+      display:block;
+     margin-top: 0px;
+    }
+
+    .dropdown li {
+      margin-top:0px;
+    }
+
+    .dropdown li a {
+      display: block;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    .dropdown li a:hover {
+      background-color: cyan;
+    }
+
+    /* Main content styles */
+    #picture {
+      width: 100%;
+      height: auto;
+    }
+
+    .circles {
+      background-color: purple;
+      height: 300px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .circle1 {
+      height: 220px;
+      width: 220px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      padding-top: 2%;
+      margin: 2%;
+    }
+
+    .circle1:hover {
+      opacity: 0.8;
+    }
+
+    .circle1 img {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+    }
+
+    /* Footer styles */
+    .footer {
+      margin-top: 50px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    /* Media queries */
+    @media only screen and (max-width: 600px)
+     {
+      .navbar ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+ 
+  .dropdown ul {
+    display: block;
+    width: 100%;
+  }
+ 
+  .dropdown ul li {
+    margin-top: 10px;
+     display: block;
+  }
+      .navbar ul{
+        flex-direction: column;
+      }
+
+      .navbar li {
+        margin: 10px 0;
+        display: block;
+       
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+      }
+
+      .navbar li:hover .dropdown ul {
+        display: block;
+      }
+
+      .circles {
+        height: auto;
+      }
+
+      .circle1 {
+        width: 80%;
+        margin: 10px;
+       
+
+      }
+       
+    }
+  </style>
+</head>
+<body>
+    <div id="App" class="navbar">
+    <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Technologies
+         
+          <div class="dropdown">
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JAVA SCRIPT</a></li>
+            </ul>
+          </div>
+          </a>
+        </li>
+    </ul>
+    </div>
+    <img src="Pexel Photo.jpeg" alt="Students" id="picture">
+    <div class="circles">
+      <div class="circle1" id="circle_1" >
+        <img src="square-root.png" id="sq"><br>
+        <a href="Algebra.html">Algebra</a>
+      </div>
+      <div class="circle1" id="circle_2" >
+        <img src="square-root.png" id="g"><br>
+        <a href="Algebra.html">
+        Geometry</a>
+      </div>
+      <div class="circle1" id="circle_3" >
+        <img src="square-root.png" id="c"><br>
+        <a href="Algebra.html">
+        Calculus</a>
+      </div>
+    </div>
+
+    <div class="footer">
+     
+     
+     
+     
+    </div>
+  </body>
+</html>
